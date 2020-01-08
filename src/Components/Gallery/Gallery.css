@@ -1,0 +1,28 @@
+.gallery {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.img {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 30px;
+  background: black;
+}
+
+@media screen and (min-width: 500px) {
+  .gallery {
+    flex-flow: row wrap;
+  }
+
+  .img {
+    width: 150px;
+  }
+
+  .img:not(:first-of-type) {
+    margin-left: 20px;
+  }
+}

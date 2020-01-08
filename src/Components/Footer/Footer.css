@@ -1,0 +1,14 @@
+.footer {
+  height: 56px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+.footer-copyright {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 56px;
+  color: #ccc;
+}
