@@ -7,13 +7,13 @@ import './App.css';
 
 function App() {
   const testApi = new ApiService();
-  const json = testApi.getAllPreviews().then(res => console.log(res));
-  const json3 = testApi.getImageAndComments('237').then(res => console.log(res));
-  const post = testApi
-    .postComment('great pic', '237', 237)
-    .then(res => console.log(res))
-    .catch(e => console.error('Error', e));
-  const json4 = testApi.getImageAndComments('237').then(res => console.log(res));
+  // const json = testApi.getAllPreviews().then(res => console.log(res));
+  // const json3 = testApi.getImageAndComments('237').then(res => console.log(res));
+  // const post = testApi
+  //   .postComment('great pic', '237', 237)
+  //   .then(res => console.log(res))
+  //   .catch(e => console.error('Error', e));
+  // const json4 = testApi.getImageAndComments('237').then(res => console.log(res));
   return (
     <div className="App">
       <header className="App-header">
