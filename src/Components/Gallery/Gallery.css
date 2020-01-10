@@ -9,26 +9,23 @@
 }
 
 .img {
-  /*max-width: 100%;*/
   width: 100%;
   height: auto;
-  /*flex: 1 1;*/
-  /*height: 150px;*/
   margin-bottom: 30px;
   background: black;
   object-fit: contain;
+  cursor: pointer;
 
 }
 
 @media screen and (min-width: 500px) {
   .gallery {
     flex-flow: row wrap;
-    padding: 20px;
+    /*padding: 20px;*/
     width: 100%;
   }
 
   .img {
-    /*margin: 20px;*/
     width: auto;
   }
 }

@@ -1,0 +1,15 @@
+.modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
+.modal button {
+  dispay: none;
+}
+.modal__close-button {
+  position: absolute;
+  top: 21px;
+  right: 21px;
+}
