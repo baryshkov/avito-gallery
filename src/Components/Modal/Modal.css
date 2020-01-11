@@ -1,15 +1,36 @@
 .modal {
-  position: absolute;
+  position: fixed;
+  overflow-y: hidden;
   width: 100vw;
   height: 100vh;
   background-color: white;
+  z-index: 100;
+  transition: all 0.3s;
 }
 
 .modal button {
-  dispay: none;
+  border: none;
+  background: none;
 }
 .modal__close-button {
+  cursor: pointer;
   position: absolute;
   top: 21px;
   right: 21px;
+}
+
+@media screen and (min-width: 500px) {
+  .modal {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    padding: 75px;
+    /*max-width: 960px;*/
+    animation: keyframes-show-0-2-5 0.5s ease;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
 }

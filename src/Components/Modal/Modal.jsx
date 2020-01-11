@@ -19,8 +19,7 @@ const closeButtonSvg = (
 const Modal = ({ onClose, id }) => {
   return (
     <div className="modal">
-      modal {id}
-      <PicAndComments id={id} />
+      <PicAndComments imageId={id} />
       <button onClick={onClose}>{closeButtonSvg}</button>
     </div>
   );

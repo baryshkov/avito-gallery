@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import apiService from '../../apiService/apiService';
+import ApiService from '../../apiService/apiService';
 import Modal from '../Modal';
 import './Gallery.css';
 
 const Gallery = () => {
-  const testApi = new apiService();
+  const testApi = new ApiService();
   const [previews, setPreviews] = useState(null);
   const [modalOpened, setModalOpened] = useState(false);
   const [modalId, setModalId] = useState(null);
@@ -20,12 +20,6 @@ const Gallery = () => {
   const onModalOpen = id => {
     setModalId(id);
     setModalOpened(true);
-    console.log('opened', id);
-  };
-
-  const onModalClose = () => {
-    console.log('closing');
-    setModalOpened(false);
   };
 
   const loading = <span>loading...</span>;
