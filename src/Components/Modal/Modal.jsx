@@ -1,4 +1,5 @@
 import React, { useEffect, useCallback, useRef } from 'react';
+import PropTypes from 'prop-types';
 import PicAndComments from '../PicAndComments';
 import './Modal.css';
 
@@ -48,6 +49,11 @@ const Modal = ({ onClose, id }) => {
       <PicAndComments imageId={id} onClose={onClose} forwardedRef={modal} />
     </div>
   );
+};
+
+Modal.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default Modal;

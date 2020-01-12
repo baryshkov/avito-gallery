@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import ApiService from '../../apiService/apiService';
 import './PicAndComments.css';
 
@@ -28,12 +29,11 @@ const PicAndComments = ({ imageId, onClose, forwardedRef }) => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await testApi.getImageAndComments(imageId);
-      console.log(data);
       setImageUrl(data.url);
       setComments(data.comments);
     };
     fetchData();
-  }, [imageId]);
+  }, []);
 
   const validate = e => {
     const { value, name } = e.target;
@@ -103,6 +103,15 @@ const PicAndComments = ({ imageId, onClose, forwardedRef }) => {
       </form>
     </div>
   );
+};
+
+PicAndComments.propTypes = {
+  imageId: PropTypes.number.isRequired,
+  onClose: PropTypes.func.isRequired,
+  forwardedRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
 };
 
 export default PicAndComments;

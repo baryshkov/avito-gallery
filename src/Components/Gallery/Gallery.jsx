@@ -15,7 +15,7 @@ const Gallery = () => {
       setPreviews(data);
     };
     fetchData();
-  }, []);
+  }, [testApi]);
 
   const onModalOpen = id => {
     setModalId(id);
