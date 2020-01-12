@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/avito-gallery/static/css/main.7fbccf8d.chunk.css",
+    "main.js": "/avito-gallery/static/js/main.5feeca85.chunk.js",
+    "main.js.map": "/avito-gallery/static/js/main.5feeca85.chunk.js.map",
+    "runtime-main.js": "/avito-gallery/static/js/runtime-main.b2861c51.js",
+    "runtime-main.js.map": "/avito-gallery/static/js/runtime-main.b2861c51.js.map",
+    "static/css/2.764ccc25.chunk.css": "/avito-gallery/static/css/2.764ccc25.chunk.css",
+    "static/js/2.b1c2404b.chunk.js": "/avito-gallery/static/js/2.b1c2404b.chunk.js",
+    "static/js/2.b1c2404b.chunk.js.map": "/avito-gallery/static/js/2.b1c2404b.chunk.js.map",
+    "index.html": "/avito-gallery/index.html",
+    "precache-manifest.3b881886fc3485044cf3ce8eaaecbee3.js": "/avito-gallery/precache-manifest.3b881886fc3485044cf3ce8eaaecbee3.js",
+    "service-worker.js": "/avito-gallery/service-worker.js",
+    "static/css/2.764ccc25.chunk.css.map": "/avito-gallery/static/css/2.764ccc25.chunk.css.map",
+    "static/css/main.7fbccf8d.chunk.css.map": "/avito-gallery/static/css/main.7fbccf8d.chunk.css.map",
+    "static/js/2.b1c2404b.chunk.js.LICENSE": "/avito-gallery/static/js/2.b1c2404b.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b2861c51.js",
+    "static/css/2.764ccc25.chunk.css",
+    "static/js/2.b1c2404b.chunk.js",
+    "static/css/main.7fbccf8d.chunk.css",
+    "static/js/main.5feeca85.chunk.js"
+  ]
+}
