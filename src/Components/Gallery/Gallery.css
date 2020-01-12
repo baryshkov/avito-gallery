@@ -17,11 +17,14 @@
   cursor: pointer;
 
 }
+.gallery__loading {
+  margin: 0 auto;
+  font-size: 30px;
+}
 
 @media screen and (min-width: 500px) {
   .gallery {
     flex-flow: row wrap;
-    /*padding: 20px;*/
     width: 100%;
   }
 

@@ -2,7 +2,21 @@ import React, { useEffect, useState } from 'react';
 import ApiService from '../../apiService/apiService';
 import './PicAndComments.css';
 
-const PicAndComments = ({ imageId }) => {
+const closeButtonSvg = (
+  <svg
+    className="modal__close-button"
+    width="20"
+    height="19"
+    viewBox="0 0 20 19"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <line x1="1.35355" y1="0.646447" x2="19.3536" y2="18.6464" stroke="black" />
+    <line x1="0.646447" y1="18.6464" x2="18.6464" y2="0.646446" stroke="black" />
+  </svg>
+);
+
+const PicAndComments = ({ imageId, onClose, forwardedRef }) => {
   const testApi = new ApiService();
 
   const [imageUrl, setImageUrl] = useState(null);
@@ -37,12 +51,15 @@ const PicAndComments = ({ imageId }) => {
   const fakeComment =
     comments && comments.length === 0 ? (
       <div className="comments-wrapper__comment">
-        <div className="comments-wrapper__comment__text">Ваш комментарий будет первым</div>
+        <div className="comments-wrapper__comment__text">Ваш комментарий будет первым!</div>
       </div>
     ) : null;
 
   return (
-    <div className="container">
+    <div className="container" ref={forwardedRef}>
+      <button type="button" className="close-button" onClick={onClose}>
+        {closeButtonSvg}
+      </button>
       <img className="image" src={imageUrl} alt="hi-res" />
       <div className="comments-wrapper">
         {fakeComment ||

@@ -1,26 +1,51 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useCallback, useRef } from 'react';
 import PicAndComments from '../PicAndComments';
 import './Modal.css';
 
-const closeButtonSvg = (
-  <svg
-    className="modal__close-button"
-    width="20"
-    height="19"
-    viewBox="0 0 20 19"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <line x1="1.35355" y1="0.646447" x2="19.3536" y2="18.6464" stroke="black" />
-    <line x1="0.646447" y1="18.6464" x2="18.6464" y2="0.646446" stroke="black" />
-  </svg>
-);
-
 const Modal = ({ onClose, id }) => {
+  const modal = useRef(null);
+
+  const handleKeyUp = useCallback(
+    e => {
+      const keys = {
+        27: () => {
+          e.preventDefault();
+          onClose();
+          window.removeEventListener('keyup', handleKeyUp, false);
+        },
+      };
+
+      if (keys[e.keyCode]) {
+        keys[e.keyCode]();
+      }
+    },
+    [onClose],
+  );
+
+  const handleOutsideClick = useCallback(
+    e => {
+      if (modal !== null && modal !== undefined) {
+        if (!modal.current.contains(e.target)) {
+          onClose();
+          document.removeEventListener('click', handleOutsideClick, false);
+        }
+      }
+    },
+    [onClose],
+  );
+
+  useEffect(() => {
+    window.addEventListener('keyup', handleKeyUp, false);
+    document.addEventListener('click', handleOutsideClick, false);
+
+    return () => {
+      window.removeEventListener('keyup', handleKeyUp, false);
+      document.removeEventListener('click', handleOutsideClick, false);
+    };
+  }, [handleKeyUp, handleOutsideClick]);
   return (
     <div className="modal">
-      <PicAndComments imageId={id} />
-      <button onClick={onClose}>{closeButtonSvg}</button>
+      <PicAndComments imageId={id} onClose={onClose} forwardedRef={modal} />
     </div>
   );
 };

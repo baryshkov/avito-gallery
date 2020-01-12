@@ -1,14 +1,10 @@
 import React from 'react';
-import ApiService from '../../apiService/apiService';
 import Gallery from '../Gallery';
 import Footer from '../Footer';
 import 'normalize.css';
 import './App.css';
 
-function App() {
-  const testApi = new ApiService();
-  const json = testApi.getAllPreviews().then(res => console.log(res));
-
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +14,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

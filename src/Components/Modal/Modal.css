@@ -11,23 +11,23 @@
 .modal button {
   border: none;
   background: none;
-}
-.modal__close-button {
-  cursor: pointer;
   position: absolute;
   top: 21px;
   right: 21px;
 }
+.close-button {
+  cursor: pointer;
+}
 
 @media screen and (min-width: 500px) {
   .modal {
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     opacity: 1;
     padding: 75px;
-    /*max-width: 960px;*/
     animation: keyframes-show-0-2-5 0.5s ease;
     overflow-x: hidden;
     overflow-y: auto;

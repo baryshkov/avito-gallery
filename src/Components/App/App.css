@@ -13,22 +13,15 @@
 }
 
 .App-header__title {
-  font-family: Roboto Condensed;
+  font-family: Roboto Condensed, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
   line-height: 42px;
   margin-top: 15px;
   margin-bottom: 30px;
-  /*align-items: center;*/
   text-align: center;
   text-transform: uppercase;
 
   color: #000000;
-}
-
-@media screen and (min-width: 500px) {
-  .App {
-    /*margin: 0 auto;*/
-  }
 }

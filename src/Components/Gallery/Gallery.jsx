@@ -22,14 +22,14 @@ const Gallery = () => {
     setModalOpened(true);
   };
 
-  const loading = <span>loading...</span>;
+  const loading = <div className="gallery__loading">Loading...</div>;
 
   return (
     <>
       <div className="gallery">
         {(previews &&
           previews.map(({ id, url }) => (
-            <img className="img" key={id} src={url} alt="photo" onClick={() => onModalOpen(id)} />
+            <img className="img" key={id} src={url} alt="preview" onClick={() => onModalOpen(id)} />
           ))) ||
           loading}
       </div>
