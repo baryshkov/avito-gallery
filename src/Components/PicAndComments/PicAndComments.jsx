@@ -33,6 +33,7 @@ const PicAndComments = ({ imageId, onClose, forwardedRef }) => {
       setComments(data.comments);
     };
     fetchData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const validate = e => {

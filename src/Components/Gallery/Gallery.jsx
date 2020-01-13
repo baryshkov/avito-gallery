@@ -15,7 +15,8 @@ const Gallery = () => {
       setPreviews(data);
     };
     fetchData();
-  }, [testApi]);
+    // eslint-disable-next-line
+  }, []);
 
   const onModalOpen = id => {
     setModalId(id);
