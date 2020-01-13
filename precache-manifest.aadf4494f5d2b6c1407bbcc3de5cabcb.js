@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0342f513fe976af4168b985b780f3f9b",
+    "revision": "e31e2fe3c184a6f81ada224edf9f1dcf",
     "url": "/avito-gallery/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/avito-gallery/static/css/2.764ccc25.chunk.css"
   },
   {
-    "revision": "253ce2d911ef7d4bd44f",
+    "revision": "ed1ff4961d133aedbe6b",
     "url": "/avito-gallery/static/css/main.7fbccf8d.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/avito-gallery/static/js/2.b1c2404b.chunk.js.LICENSE"
   },
   {
-    "revision": "253ce2d911ef7d4bd44f",
-    "url": "/avito-gallery/static/js/main.f8d80f76.chunk.js"
+    "revision": "ed1ff4961d133aedbe6b",
+    "url": "/avito-gallery/static/js/main.baafd27b.chunk.js"
   },
   {
     "revision": "8320b87eb9260f914dee",
