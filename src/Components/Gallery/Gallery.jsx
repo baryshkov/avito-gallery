@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ApiService from '../../apiService/apiService';
 import Modal from '../Modal';
+import Spinner from '../Spinner';
 import './Gallery.css';
 
 const Gallery = () => {
@@ -31,8 +32,7 @@ const Gallery = () => {
         {(previews &&
           previews.map(({ id, url }) => (
             <img className="img" key={id} src={url} alt="preview" onClick={() => onModalOpen(id)} />
-          ))) ||
-          loading}
+          ))) || <Spinner />}
       </div>
       {modalOpened && <Modal onClose={() => setModalOpened(false)} id={modalId} />}
     </>
