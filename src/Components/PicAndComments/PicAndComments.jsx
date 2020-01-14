@@ -67,7 +67,9 @@ const PicAndComments = ({ imageId, onClose, forwardedRef }) => {
       </button>
       {(loading && <Spinner />) || (
         <>
-          <img className="image" src={imageUrl} alt="hi-res" />
+          <div className="wrapper">
+            <img className="image" src={imageUrl} alt="hi-res" />
+          </div>
           <div className="comments-wrapper">
             {fakeComment ||
               (comments &&
