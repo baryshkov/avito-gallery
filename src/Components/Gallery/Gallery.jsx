@@ -24,8 +24,6 @@ const Gallery = () => {
     setModalOpened(true);
   };
 
-  const loading = <div className="gallery__loading">Loading...</div>;
-
   return (
     <>
       <div className="gallery">
