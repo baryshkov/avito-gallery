@@ -25,8 +25,8 @@ const PicAndComments = ({ imageId, onClose, forwardedRef }) => {
   const [comments, setComments] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const [username, setUsername] = useState(null);
-  const [userComment, setUserComment] = useState(null);
+  const [username, setUsername] = useState('');
+  const [userComment, setUserComment] = useState('');
 
   useEffect(() => {
     setLoading(true);
@@ -37,13 +37,8 @@ const PicAndComments = ({ imageId, onClose, forwardedRef }) => {
       setLoading(false);
     };
     fetchData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
   }, []);
-
-  const validate = e => {
-    const { value, name } = e.target;
-    name === 'name' ? setUsername(value) : setUserComment(value);
-  };
 
   const onSubmit = e => {
     e.preventDefault();
@@ -97,7 +92,7 @@ const PicAndComments = ({ imageId, onClose, forwardedRef }) => {
               type="text"
               name="name"
               placeholder="Ваше имя"
-              onChange={validate}
+              onChange={e => setUsername(e.target.value)}
               required
             />
             <input
@@ -105,7 +100,7 @@ const PicAndComments = ({ imageId, onClose, forwardedRef }) => {
               type="text"
               name="comment"
               placeholder="Ваш комментарий"
-              onChange={validate}
+              onChange={e => setUserComment(e.target.value)}
               required
             />
             <input type="submit" className="input-form__button" value="Оставить комментарий" />
@@ -119,10 +114,7 @@ const PicAndComments = ({ imageId, onClose, forwardedRef }) => {
 PicAndComments.propTypes = {
   imageId: PropTypes.number.isRequired,
   onClose: PropTypes.func.isRequired,
-  forwardedRef: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
-  ]).isRequired,
+  forwardedRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }).isRequired,
 };
 
 export default PicAndComments;
