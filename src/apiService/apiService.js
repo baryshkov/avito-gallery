@@ -15,7 +15,8 @@ export default class ApiService {
   getImageAndComments = async imageId => {
     const response = await fetch(`${this.API_BASE}${imageId}`);
     if (!response.ok) {
-      throw new Error(`empty for now`);
+      throw new Error(`Could not fetch big image, received an error with response status 
+        ${response.status}`);
     }
     return response.json();
   };
